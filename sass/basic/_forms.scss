@@ -1,0 +1,113 @@
+@import "../settings/settings";
+
+form {
+	.field-group {
+		margin-bottom: 1em;
+
+		label {
+			display: block;
+			margin-bottom: .5em;
+
+			font-weight: bold;
+		}
+
+		input:not([class^="btn"]),
+		textarea {
+			border: 1px solid $field-border-color;
+
+			padding: .75em;
+
+			&:focus,
+			&:hover {
+				border-color: darken($field-border-color, 15%);
+				outline: none;
+			}
+
+			&.field-fw {
+				width: 100%;
+			}
+		}
+
+		.help {
+			@extend small;
+
+			margin: .5em 0 0;
+
+			color: $muted-text-color;
+			font-style: italic;
+		}
+
+		&.field-error {
+			label,
+			.help,
+			input {
+				color: $field-error-color;
+				border-color: lighten($field-error-color, 40%);
+			}
+		}
+	}
+
+	.required {
+		color: $field-required-color;
+	}
+
+	fieldset {
+		border-color: $field-border-color;
+
+		padding: 1.5em;
+		margin-bottom: $baseline;
+
+		legend {
+			font-weight: bold;
+
+			padding: 0 .5em;
+		}
+	}
+
+	input[type="checkbox"],
+	input[type="radio"] {
+		display: none;
+	}
+
+	input[type="checkbox"] + label:before {
+		background-color: #fff;
+		border: 1px solid $field-border-color;
+
+		content: "";
+		display: inline-block;
+		height: 1.25em;
+		margin: -2px 6px 0 0;
+		vertical-align: middle;
+		width: 1.25em;
+
+		font-size: .75em;
+		line-height: 1.25em;
+		text-align: center;
+	}
+
+	input[type="checkbox"]:checked + label:before {
+		content: "\2713";
+	}
+
+	input[type="radio"] + label:before {
+		background-color: #fff;
+
+		border: 1px solid $field-border-color;
+		border-radius: 1.25em;
+
+		content: "";
+		display: inline-block;
+		height: .6em;
+		margin: -2px 6px 0 0;
+		width: .6em;
+		vertical-align: middle;
+
+		font-size: 1.65em;
+		line-height: .6em;
+		text-align: center;
+	}
+
+	input[type="radio"]:checked + label:before {
+		content: "\2022";
+	}
+}

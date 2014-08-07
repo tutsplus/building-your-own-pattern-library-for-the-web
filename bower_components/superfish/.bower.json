@@ -1,0 +1,33 @@
+{
+  "name": "superfish",
+  "version": "1.7.4",
+  "main": [
+    "dist/js/superfish.js",
+    "dist/js/hoverIntent.js",
+    "dist/css/superfish.css"
+  ],
+  "ignore": [
+    "**/.*",
+    "*.json",
+    "Gruntfile.coffee",
+    "changelog.txt",
+    "node_modules",
+    "components",
+    "README.md",
+    "test",
+    "src"
+  ],
+  "dependencies": {
+    "jquery": "~1.8"
+  },
+  "homepage": "https://github.com/joeldbirch/superfish",
+  "_release": "1.7.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.7.4",
+    "commit": "0d3a5f4c095ccfbc1e4724319138a2ca126b9814"
+  },
+  "_source": "git://github.com/joeldbirch/superfish.git",
+  "_target": "*",
+  "_originalSource": "superfish"
+}

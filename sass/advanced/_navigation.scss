@@ -1,0 +1,163 @@
+@import "../settings/settings";
+
+.navbar-container {
+	#rwd-trigger {
+		display: none;
+	}
+
+	.sf-menu {
+		float: right;
+	}
+
+	.rwd-menu {
+		display: none;
+
+		a {
+			display: block;
+			padding: .75em 1.5em;
+
+			font-weight: bold;
+			text-decoration: none;
+
+			&:active {
+				background-color: $btn-default-bg;
+			}
+		}
+
+		ul {
+			list-style-type: none;
+			margin-bottom: 0;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.logo img,
+		#rwd-trigger {
+			display: block;
+			margin: 0 auto $baseline auto;
+		}
+
+		.sf-menu {
+			display: none;
+		}
+	}
+}
+
+/* Superfish Essential Styles. */
+.sf-menu, 
+.sf-menu * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.sf-menu {
+	li {
+		position: relative;
+	}
+
+	> li {
+		float: left;
+	}
+
+	ul {
+		position: absolute;
+		display: none;
+		top: 100%;
+		left: 0;
+		z-index: 99;
+	}
+
+	li:hover > ul,
+	li.sfHover > ul {
+		display: block;
+	}
+
+	a {
+		display: block;
+		position: relative;
+	}
+
+	ul ul {
+		top: 0;
+		left: 100%;
+	}
+}
+
+
+/* Superfish Menu Skin. */
+.sf-menu {
+	ul {
+		min-width: 12em; /* allow long menu items to determine submenu width */
+	}
+
+	a {
+		border-top: 1px solid rgba(255, 255, 255, .5);
+
+		padding: .75em 1.5em;
+
+		color: $navbar-link-color;
+		text-decoration: none;
+	}
+
+	li {
+		white-space: nowrap; /* no need for Supersubs plugin */
+
+		-webkit-transition: background .2s;
+		transition: background .2s;
+	}
+	
+	ul li {
+		background-color: $navbar-submenu-bg;
+	}
+
+	ul ul li {
+		background-color: darken($navbar-submenu-bg, 10%);
+	}
+
+	li:hover,
+	li.sfHover {
+		background: darken($navbar-submenu-bg, 10%);
+
+		/* only transition out, not in */
+		-webkit-transition: none;
+		transition: none;
+	}
+}
+
+/*** arrows (for all except IE7) **/
+.sf-arrows .sf-with-ul {
+	padding-right: 2.5em;
+}
+
+/* styling for both css and generated arrows */
+.sf-arrows .sf-with-ul:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 1em;
+	margin-top: -3px;
+	height: 0;
+	width: 0;
+	/* order of following 3 rules important for fallbacks to work */
+	border: 5px solid transparent;
+	border-top-color: $text-color;
+}
+
+.sf-arrows > li > .sf-with-ul:focus:after,
+.sf-arrows > li:hover > .sf-with-ul:after,
+.sf-arrows > .sfHover > .sf-with-ul:after {
+	border-top-color: $text-color;
+}
+
+/* styling for right-facing arrows */
+.sf-arrows ul .sf-with-ul:after {
+	margin-top: -5px;
+	margin-right: -3px;
+	border-color: transparent;
+	border-left-color: $text-color;
+}
+.sf-arrows ul li > .sf-with-ul:focus:after,
+.sf-arrows ul li:hover > .sf-with-ul:after,
+.sf-arrows ul .sfHover > .sf-with-ul:after {
+	border-left-color: $text-color;
+}

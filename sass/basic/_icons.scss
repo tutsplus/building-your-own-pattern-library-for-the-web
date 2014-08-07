@@ -1,0 +1,32 @@
+@import "../settings/settings";
+
+[class^="icon-"] {
+	border: 1px solid $icon-border-color;
+
+	height: 3em;
+	padding: .25em;
+	margin-bottom: $baseline;
+	width: 3em;
+
+	text-align: center;
+
+	i {
+		line-height: 2.5em;
+	}
+}
+
+.icon-circle {
+	border-radius: 100%;
+}
+
+.icon-rounded {
+	border-radius: $icon-roundness;
+}
+
+.icon-large {
+	font-size: 150%;
+}
+
+.icon-huge {
+	font-size: 250%;
+}

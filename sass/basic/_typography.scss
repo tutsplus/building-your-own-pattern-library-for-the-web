@@ -1,0 +1,99 @@
+@import "../settings/settings";
+
+html {
+	font-size: 1em;
+}
+
+html,
+input,
+button,
+textarea {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+	color: $text-color;
+	font-family: $body-font-family;
+	line-height: $baseline;
+}
+
+p {
+	margin-bottom: $baseline;
+}
+
+a,
+a:visited {
+	color: $link-color;
+
+	&:hover {
+		color: $text-color;
+	}
+}
+
+hr {
+	border: 0;
+
+	background-color: $hr-color;
+
+	height: 1px;
+	margin: $baseline 0;
+}
+
+h1, 
+h2, 
+h3, 
+h4,
+h5,
+h6 {
+	margin: $baseline 0 .5em;
+	line-height: 1.2;
+}
+
+h5,
+h6 {
+	line-height: 1.5;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: $h1-size;
+}
+
+h2 {
+	font-size: $h2-size;
+}
+
+h3 {
+	font-size: $h3-size;
+}
+
+h4 {
+	font-size: $h4-size;
+}
+
+h5 {
+	font-size: $h5-size;
+}
+
+h6 {
+	font-size: $h6-size;
+}
+
+ul,
+ol {
+	margin: 0 0 $baseline $baseline;
+}
+
+blockquote {
+	color: $muted-text-color;
+	font-style: italic;
+
+	margin-left: $baseline;
+
+	footer {
+		@extend small;
+		font-style: normal;
+	}
+}

@@ -1,0 +1,101 @@
+/**
+ * ----------------------------------------------------------------------------------------
+ * 3.0 - Presentation Styles.
+ * ----------------------------------------------------------------------------------------
+ */
+
+/**
+ * Grid.
+ */
+.demo-col {
+	background-color: #def0fa;
+	text-align: center;
+	padding: 1em 0;
+	display: block;
+
+	border-radius: 3px;
+}
+
+.row {
+	margin-bottom: 2em;
+}
+
+
+
+/**
+ * Header.
+ */
+.pres-header {
+	border-radius: 5px;
+
+	background-color: #272822;
+
+	margin-top: 1.5em;
+	padding: 1.5em;
+
+	color: #eaeaea;
+
+	h3 {
+		color: #e6db74;
+	}
+}
+
+
+
+/**
+ * Navigation.
+ */
+.pres-widget {
+	background-color: #fff;
+	opacity: .5;
+
+	position: fixed;
+	padding: 1.5em 0;
+	right: 1.5em;
+	top: 1.5em;
+
+	-webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, .5);
+	box-shadow: 0 0 4px 0 rgba(0, 0, 0, .5);
+
+	border-radius: 2px;
+
+	transition: opacity .3s;
+	z-index: 9999999;
+
+	p:first-child {
+		padding: 0 1.5em;
+	}
+
+	&:hover {
+		opacity: 1;
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		li a {
+			display: block;
+			padding: .5em 1.5em;
+
+			color: #333;
+			text-decoration: none;
+
+			&:hover {
+				background-color: #dde2e4;
+			}
+		}
+	}
+
+	@media (max-width: 768px) {
+		display: none;
+	}
+}
+
+
+
+
+
+
+

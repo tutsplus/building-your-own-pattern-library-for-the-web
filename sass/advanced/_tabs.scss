@@ -1,0 +1,76 @@
+@import "../settings/settings";
+
+.tabs-links {
+	margin: 0;
+
+	&:after {
+		content: "";
+
+		display: table;
+		clear: both;
+	}
+
+	li {
+		float: left;
+		list-style-type: none;
+
+		margin-right: 1px;
+
+		&:first-child {
+			margin-left: .5em;
+		}
+
+		a {
+			background-color: lighten($tabs-inactive-bg-color, 15%);
+
+			display: inline-block;
+			padding: 1em 1.5em;
+
+			color: lighten($text-color, 30%);
+			text-decoration: none;
+
+			&:hover {
+				background-color: $tabs-inactive-bg-color;
+				color: $text-color;
+			}
+		}
+
+		&.active a,
+		&.active a:hover {
+			border: 1px solid $tabs-border-color;
+			border-bottom: 0;
+
+			background-color: $tabs-active-bg-color;
+
+			color: $text-color;
+			font-weight: bold;
+
+			margin-bottom: -1px;
+		}
+	}
+}
+
+.tabs-content {
+	border: 1px solid $tabs-border-color;
+
+	background-color: #fff;
+
+	padding: 1.5em;
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.tab {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+
+
+
+
+
